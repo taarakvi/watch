@@ -15,3 +15,24 @@ s.style.transform = `rotate(${ssRotation}deg)`;
 
 }
 setInterval(time,1000);
+
+// digital watch
+let hour = document.getElementById("hour")
+let minut = document.getElementById("minut")
+let second = document.getElementById("second")
+let amPM = document.getElementById("am/pm")
+function dWatch(){
+    let date = new Date()
+    let hr = date.getHours()
+    let mm = date.getMinutes()
+    let ss = date.getSeconds()
+    hour.textContent = Math.floor(hr/2)
+    minut.textContent = mm;
+    second.textContent = ss;
+    if(hr>12){
+        amPM.textContent = "PM"
+    }else{
+        amPM.textContent = "AM"
+    };
+}dWatch()
+setInterval(dWatch,1000)
