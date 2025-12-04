@@ -26,10 +26,10 @@ function dWatch(){
     let hr = date.getHours()
     let mm = date.getMinutes()
     let ss = date.getSeconds()
-    hour.textContent = Math.floor(hr/2)
+    hour.textContent = hr
     minut.textContent = mm;
     second.textContent = ss;
-    if(hr>12){
+    if(hr>=12){
         amPM.textContent = "PM"
     }else{
         amPM.textContent = "AM"
